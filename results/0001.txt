@@ -1,2 +1,7 @@
-TiSe
+Your type is: TiSe
+Your function stack is:
+Ti - Introverted Thinking
+Se - Extroverted Sensing
+Ni - Introverted Intuition
+Fe - Extroverted Feeling
 For more information, visit: https://www.typeinmind.com/tise
