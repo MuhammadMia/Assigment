@@ -7,7 +7,8 @@ using namespace std;
 
 string getFinalResult(bool totalL1, bool totalL2, bool totalL3, bool totalL4)
 {
-    //TODO Compounding into a 4 bit int
+    //* Compounding into a 4 bit int
+    //* A 1 represents true in the specific level, 0 represents false
     string finalResult = "";
 
     if (totalL1)
@@ -66,6 +67,7 @@ void displayFinalResult(string result)
     string temp;
     int count = 0;
 
+    //* Reading the result from the text file
     if (resultFile.is_open())
     {
         while (getline(resultFile, temp))

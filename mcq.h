@@ -98,6 +98,8 @@ mcq *readMCQ(string filename)
     string temp;
     string question[3];
     int i = 0;
+    //* The first question in the file is ignored later in the code because it is
+    //* an intentional blank
 
     if (questionFile.is_open())
     {
