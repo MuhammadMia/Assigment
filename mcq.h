@@ -1,5 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
+#include <fstream>
+#include <string>
 
 using namespace std;
 
@@ -72,4 +74,56 @@ char askMCQ(mcq q)
     cin.ignore();
 
     return (userAnswer);
+}
+
+//* Function below takes in a filename and returns a pointer to an array of questions
+mcq *readMCQ(string filename)
+{
+    fstream questionFile;
+    questionFile.open(filename, ios::in);
+
+    if (!questionFile) //* Making sure the file is found
+    {
+        cout << "File not found!";
+        exit(1);
+    }
+    else
+    {
+        cout << "\nFile found, continuing...";
+    }
+
+    mcq questions[15];
+    int qCount = 0;
+
+    string temp;
+    string question[3];
+    int i = 0;
+
+    if (questionFile.is_open())
+    {
+
+        while (getline(questionFile, temp))
+        {
+            cout << "\n"
+                 << temp;
+            if (!(temp == "-----"))
+            {
+                questions[qCount] = {question[0], question[1], question[2], qCount + 1};
+                i = 0;
+                qCount++;
+            }
+            else
+            {
+                question[i] = temp;
+                i++;
+            }
+        }
+    }
+
+    questionFile.close();
+
+    mcq *qp;
+    qp = questions;
+
+    return qp;
 }

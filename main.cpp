@@ -18,22 +18,39 @@ int main(int argc, char const *argv[])
         cout << "File not found!";
         exit(1);
     }
+    else
+    {
+        cout << "\nFile found, continuing...";
+    }
 
     if (questionFile.is_open())
     {
-        string tp;
-        while (getline(questionFile, tp))
+        mcq questions[9];
+        int qCount = 0;
+
+        string temp;
+        string question[3];
+        int i = 0;
+
+        while (getline(questionFile, temp))
         {
             cout << "\n"
-                 << tp;
+                 << temp;
+            if (!(temp == "-----"))
+            {
+                questions[qCount] = {question[0], question[1], question[2], qCount + 1};
+                i = 0;
+                qCount++;
+            }
+            else
+            {
+                question[i] = temp;
+                i++;
+            }
         }
     }
 
     questionFile.close();
-
-    mcq q = {"Are you gay?", "Yes", "No", 4};
-
-    q.answer = static_cast<ans>(askMCQ(q));
 
     return 0;
 }
