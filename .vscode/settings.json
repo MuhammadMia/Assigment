@@ -4,6 +4,7 @@
         "*.html": "html",
         "istream": "cpp",
         "iostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "ostream": "cpp"
     }
 }

@@ -62,7 +62,7 @@ void displayFinalResult(string result)
         exit(1);
     }
 
-    static string results[6];
+    static string results[7];
     string temp;
     int count = 0;
 
@@ -76,8 +76,11 @@ void displayFinalResult(string result)
     }
 
     //* Displaying
-    cout << "Your personality type is: "
-         << results[0]
-         << "\n\n"
-         << results[1];
+    cout << results[0] << "\n"
+         << results[1] << "\n"
+         << results[2] << "\n"
+         << results[3] << "\n"
+         << results[4] << "\n"
+         << results[5] << "\n"
+         << results[6];
 }
