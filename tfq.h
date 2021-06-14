@@ -1,5 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
+#include <fstream>
+#include <string>
 
 using namespace std;
 
@@ -59,4 +61,45 @@ bool askTFQ(tfq q)
     cin.ignore();
 
     return (userAnswer);
+}
+
+//* Function below takes in a filename and returns a pointer to an array of questions
+tfq *readTFQ(string filename)
+{
+    fstream questionFile;
+    questionFile.open(filename, ios::in);
+
+    if (!questionFile) //* Making sure the file is found
+    {
+        cout << "File not found!";
+        exit(1);
+    }
+    else
+    {
+        cout << "\nSuccess! File found, continuing...";
+    }
+
+    static tfq questions[10];
+    int qCount = 0;
+
+    string temp;
+
+    if (questionFile.is_open())
+    {
+        while (getline(questionFile, temp))
+        {
+            if (temp == "-----")
+            {
+                questions[qCount] = {temp, qCount};
+                qCount++;
+            }
+        }
+    }
+
+    questionFile.close();
+
+    tfq *qp;
+    qp = questions;
+
+    return qp;
 }

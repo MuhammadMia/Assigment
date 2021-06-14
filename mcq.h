@@ -89,10 +89,10 @@ mcq *readMCQ(string filename)
     }
     else
     {
-        cout << "\nFile found, continuing...";
+        cout << "\nSuccess! File found, continuing...";
     }
 
-    mcq questions[15];
+    static mcq questions[16];
     int qCount = 0;
 
     string temp;
@@ -101,14 +101,11 @@ mcq *readMCQ(string filename)
 
     if (questionFile.is_open())
     {
-
         while (getline(questionFile, temp))
         {
-            cout << "\n"
-                 << temp;
-            if (!(temp == "-----"))
+            if (temp == "-----")
             {
-                questions[qCount] = {question[0], question[1], question[2], qCount + 1};
+                questions[qCount] = {question[0], question[1], question[2], qCount};
                 i = 0;
                 qCount++;
             }

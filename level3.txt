@@ -1,3 +1,7 @@
+Question
+Answer 1
+Answer 2
+-----
 What sounds more like you?
 You judge and make decisions based primarily upon rationale, aggregated knowledge obtained from external sources, and a personal sense of morality and goodness.
 You judge and decidea based on primarily upon logic, deductive reasoning, and the ethical standards of society at large.
@@ -17,14 +21,6 @@ Deductively Reason
 Do you prefer to:
 Use Personal Values
 Use Community Ethics
------
-You are more prone to:
-Confirmation Bias
-Echo Chambers
------
-You are more prone to:
-Outsourcing your Thinking
-Stubborn Thinking
 -----
 You aim to:
 Pursue Authenticity

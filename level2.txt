@@ -1,3 +1,7 @@
+Question
+Answer 1
+Answer 2
+-----
 You prefer to focus on:
 Intangibles such as concepts, implications, visualizations, and meanings.
 Tangibles such as the physical world, experience, experimentation, and observation.
@@ -15,20 +19,8 @@ Future-focused, theoretical, and idealistic.
 Present/past-focused, proven, and realistic.
 -----
 You prefer to:
-Hypothesize
-Work with Tangibles
------
-You prefer to:
 Consider Metaphysics
 Have Common Sense
------
-You are prone to:
-Impracticality
-Skepticism
------
-You are prone to:
-Implausibility
-Disbelief
 -----
 You are prone to:
 Wild Speculation
