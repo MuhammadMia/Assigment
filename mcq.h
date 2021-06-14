@@ -5,29 +5,22 @@
 
 using namespace std;
 
-enum ans
-{
-    A = 0, //* Answer 1
-    B = 1, //* Unsure
-    C = 2  //* Answer 2
-};
-
 struct mcq
 {
     string question;
     string option1;
     string option2;
     int number;
-    ans answer;
+    int answer;
 };
 
-char askMCQ(mcq q)
+int askMCQ(mcq q, int level)
 {
     char userAnswer;
 
     system("CLS"); //* Clears the screen
-    cout << "~~ Section A ~~ "
-         << "\t\t\t\t\tQuestion "
+    cout << "~~ Section " << level << " ~~ "
+         << "\t\t\tQuestion "
          << q.number
          << " / 9"; //* Header bar
     cout << "\t(";
@@ -57,23 +50,30 @@ char askMCQ(mcq q)
     case 'A':
     case 'a':
         cout << "Your answer: " << q.option1;
+        cout << "\n\n~~ Press enter to continue ~~";
+        cin.ignore();
+
+        return (0);
         break;
 
     case 'B':
     case 'b':
         cout << "Your answer: Unsure";
+        cout << "\n\n~~ Press enter to continue ~~";
+        cin.ignore();
+
+        return (1);
         break;
 
     case 'C':
     case 'c':
         cout << "Your answer: " << q.option2;
+        cout << "\n\n~~ Press enter to continue ~~";
+        cin.ignore();
+
+        return (2);
         break;
     }
-
-    cout << "\n\n~~ Press enter to continue ~~";
-    cin.ignore();
-
-    return (userAnswer);
 }
 
 //* Function below takes in a filename and returns a pointer to an array of questions
@@ -123,4 +123,35 @@ mcq *readMCQ(string filename)
     qp = questions;
 
     return qp;
+}
+
+bool totalMCQ(mcq *p)
+{
+    int totalA = 0;
+    int totalC = 0;
+
+    for (int i = 1; i < 10; i++)
+    {
+        if ((p + i)->answer == 0)
+        {
+            totalA++;
+        }
+        if ((p + i)->answer == 1)
+        {
+            //* Records nothing
+        }
+        if ((p + i)->answer == 2)
+        {
+            totalC++;
+        }
+    }
+
+    if (totalA >= totalC)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }

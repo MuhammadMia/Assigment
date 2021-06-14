@@ -12,13 +12,13 @@ struct tfq
     bool answer;
 };
 
-bool askTFQ(tfq q)
+bool askTFQ(tfq q, int level)
 {
     bool userAnswer;
     char userResponse;
 
     system("CLS"); //* Clears the screen
-    cout << "~~ Section A ~~ "
+    cout << "~~ Section " << level << " ~~ "
          << "\t\t\t\t\tQuestion "
          << q.number
          << " / 9"; //* Header bar
@@ -88,7 +88,7 @@ tfq *readTFQ(string filename)
     {
         while (getline(questionFile, temp))
         {
-            if (temp == "-----")
+            if (!(temp == "-----"))
             {
                 questions[qCount] = {temp, qCount};
                 qCount++;
@@ -102,4 +102,31 @@ tfq *readTFQ(string filename)
     qp = questions;
 
     return qp;
+}
+
+bool totalTFQ(tfq *p)
+{
+    int totalTrue = 0;
+    int totalFalse = 0;
+
+    for (int i = 1; i < 10; i++)
+    {
+        if ((p + i)->answer)
+        {
+            totalTrue++;
+        }
+        if (!((p + i)->answer))
+        {
+            totalFalse++;
+        }
+    }
+
+    if (totalTrue > totalFalse)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
