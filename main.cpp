@@ -1,28 +1,32 @@
 #include <iostream>
 #include <stdlib.h>
 #include <fstream>
+#include <string>
 
-#include <mcq.h>
-#include <tfq.h>
+#include "tfq.h"
+#include "mcq.h"
 
 using namespace std;
-
-enum ans
-{
-    A = 0, //* Answer 1
-    B = 1, //* Unsure
-    C = 2  //* Answer 2
-};
 
 int main(int argc, char const *argv[])
 {
     fstream questionFile;
     questionFile.open("questions.txt", ios::in);
 
-    if (!questionFile)
+    if (!questionFile) //* Making sure the file is found
     {
         cout << "File not found!";
         exit(1);
+    }
+
+    if (questionFile.is_open())
+    {
+        string tp;
+        while (getline(questionFile, tp))
+        {
+            cout << "\n"
+                 << tp;
+        }
     }
 
     questionFile.close();
