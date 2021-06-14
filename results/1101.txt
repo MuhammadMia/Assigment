@@ -1,6 +1,7 @@
-FeNi
-Fe: Fe is the FeNi’s primary function and is what they use to communicate with the world. It is also how the world communicates back to them. Fe is not about emotions, but the gut instincts they might have about a person or situation. This function is focused outwardly and is primarily motivated and energized by the presence of other awesome people. Because Fe is first, all the other functions “serve” it.
-Ni: While Fe gathers information about people, Ni is running internally in the background, taking information and forming it into constellations of data that merge to become an idea or thought. Ni makes the internal world very abstract for the FeNi.
-Se: Se supports Fe as it helps fuel the FeNi’s impressions of the world around them. It appreciates the world as a concrete thing. Se makes them enjoy using their senses to understand and interact with the world around them.
-Ti: Ti is the FeNi’s last function, which means it can be their Achilles heel before it’s well developed. Their Ti helps them examine and analyze information that Fe collects. Ti, along with their Ni instinct, helps them determine if their ideas and opinions stand up to scrutiny. However, because Ti is their weakest link, they might have trouble when asked to analyze complex theoretical problems in their head—i.e. intricate math equations.
+Your type is: FeNi
+Your function stack is:
+Fe - Extroverted Feeling
+Ni - Introverted Intuition
+Se - Extroverted Sensing
+Ti - Introverted Thinking
 For more information, visit: https://www.typeinmind.com/feni
